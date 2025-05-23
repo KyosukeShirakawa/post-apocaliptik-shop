@@ -15,21 +15,27 @@ h2,h3,h4 {
   font-weight: 600;
 }
 
-.grey-btn {
-  background-color: var(--color-gray-800);
-  color: var(--color-gray-500);
-  padding: 4px 10px;
+
+
+#filterBtn {
+  background-color: var(--color-green-700);
+  color: var(--color-white);
+  text-align: center;
+    padding: 4px 10px;
   font-size: 0.8rem;
-  text-align: left;
-  min-width: 140px;
+  width: 140px;
   height: 30px;
   border-radius: 5px;
 }
 
-.grey-btn.selected {
-  background-color: var(--color-green-700);
-  color: var(--color-white);
-  text-align: center;
+input {
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-500);
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .card {
@@ -58,7 +64,8 @@ h2,h3,h4 {
 }
 
 
-.card button {
+.btn {
+  display: inline-block;
   color: white;
   margin-bottom: 10px;
   padding: 4px 10px;

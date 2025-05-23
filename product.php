@@ -1,14 +1,25 @@
-<?php require 'header.php' ?>
+<?php
+include_once("./storage/productStorage.php");
+
+$id = $_GET["id"];
+
+$ps = new ProductStorage();
+$item = $ps->findById($id);
+
+
+
+
+require 'header.php' ?>
 </body>
 <main>
-  <h2>Hazmat Suit</h2>
+  <h2><?= $item["name"] ?></h2>
   <section class="mb-10 mt-3">
     <div class="flex gap-4 mb-5">
-      <img class="rounded-sm w-44" src="./images/hazmat_suit.png" alt="">
+      <img class="rounded-sm w-44" src="./images/<?= $item["image"] ?>" alt="">
       <div class="flex flex-col gap-4">
-        <p>Protects against light and moderate radiation exposure.</p>
-        <p>Price: 29 999 HUF</p>
-        <p>Stock: 5 pcs</p>
+        <p><?= $item["description"] ?></p>
+        <p>Price: <?= $item["price"] ?> HUF</p>
+        <p>Stock: <?= $item["stock"] ?> pcs</p>
       </div>
     </div>
     <h3 class="mb-3">All Purchases</h3>

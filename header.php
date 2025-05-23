@@ -13,7 +13,7 @@
     <h1 class="text-xl text-white font-bold">PostApocaliptIK Shop</h1>
     <div class="flex justify-between text-amber-300">
       <div>
-        <button>Home</button>
+        <a href="index.php">Home</a>
         <button>Add New Item</button>
       </div>
       <div>

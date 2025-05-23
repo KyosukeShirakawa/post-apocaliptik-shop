@@ -1,71 +1,49 @@
-<?php require 'header.php' ?>
+<?php
+include_once('./storage/productStorage.php');
+
+$ps = new ProductStorage();
+$products =  $ps->findAll();
+
+// filter products
+if (count($_GET) > 0) {
+  if (isset($_GET["category"]) && !empty(trim($_GET["minPrice"])) && is_numeric(trim($_GET["minPrice"])) && !empty(trim($_GET["maxPrice"])) && is_numeric(trim($_GET["maxPrice"]))) {
+    $minPrice = $_GET["minPrice"];
+    $maxPrice = $_GET["maxPrice"];
+
+    $products = array_filter($products, function ($p) {
+      return $p["category"] == trim($_GET["category"]) && $p["price"] >= (int)trim($_GET["minPrice"]) && $p["price"] <= (int)trim($_GET["maxPrice"]);
+    });
+  }
+}
+
+require 'header.php';
+?>
 </body>
 <main>
   <h2 class="mb-3">Products</h2>
-  <div>
-    <button class="grey-btn">Category</button>
-    <button class="grey-btn">Min price (HUF)</button>
-    <button class="grey-btn">Max price (HUF)</button>
-    <button class="grey-btn selected">Filter</button>
-  </div>
+  <form method="get">
+    <input type="text" name="category" value="" placeholder="Category">
+    <input type="text" name="minPrice" value="" placeholder="Min price (HUF)">
+    <input type="text" name="maxPrice" value="" placeholder="Max price (HUF)">
+    <button id="filterBtn">Filter</button>
+  </form>
   <section class="mb-10 mt-3">
     <div id="grid-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 p-5">
-      <div class="card">
-        <img src="./images/siren.png" alt="">
-        <h4>Zombie Siren</h4>
-
-        <div class="card-description">
-          <p>Price: 15999 HUF</p>
-          <p>Stock: 2</p>
+      <?php foreach ($products as $product): ?>
+        <div class="card">
+          <img src="./images/<?= $product["image"] ?>" alt="">
+          <h4><?= $product["name"] ?></h4>
+          <div class="card-description">
+            <p>Price: <?= $product["price"] ?> HUF</p>
+            <p>Stock: <?= $product["stock"] ?></p>
+          </div>
+          <div class="card-btns">
+            <a href="./product.php?id=<?= $product["id"]; ?>" class=" btn btn-primary">View Details</a>
+            <a class="btn btn-secondary">Add to Cart</a>
+            <a class="btn btn-tertiary">Edit Item</a>
+          </div>
         </div>
-        <div class="card-btns">
-          <button class="card-btn-primary">View Details</button>
-          <button class="card-btn-secondary">Add to Cart</button>
-          <button class="card-btn-tertiary">Edit Item</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/siren.png" alt="">
-        <h4>Zombie Siren</h4>
-
-        <div class="card-description">
-          <p>Price: 15999 HUF</p>
-          <p>Stock: 2</p>
-        </div>
-        <div class="card-btns">
-          <button class="card-btn-primary">View Details</button>
-          <button class="card-btn-secondary">Add to Cart</button>
-          <button class="card-btn-tertiary">Edit Item</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/siren.png" alt="">
-        <h4>Zombie Siren</h4>
-
-        <div class="card-description">
-          <p>Price: 15999 HUF</p>
-          <p>Stock: 2</p>
-        </div>
-        <div class="card-btns">
-          <button class="card-btn-primary">View Details</button>
-          <button class="card-btn-secondary">Add to Cart</button>
-          <button class="card-btn-tertiary">Edit Item</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/siren.png" alt="">
-        <h4>Zombie Siren</h4>
-
-        <div class="card-description">
-          <p>Price: 15999 HUF</p>
-          <p>Stock: 2</p>
-        </div>
-        <div class="card-btns">
-          <button class="btn-primary">View Details</button>
-          <button class="btn-secondary">Add to Cart</button>
-          <button class="btn-tertiary">Edit Item</button>
-        </div>
-      </div>
+      <?php endforeach ?>
     </div>
   </section>
 </main>
