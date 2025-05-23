@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Hazmat Suit",
+    "description": "Protects against light and moderate radiation exposure.",
+    "price": 29999,
+    "category": "Protection",
+    "stock": 5,
+    "image": "hazmat_suit.png",
+    "buyers": []
+  },
+  {
+    "name": "Zombie Siren",
+    "description": "Loud alarm to warn of approaching dangers.",
+    "price": 15999,
+    "category": "Alert",
+    "stock": 2,
+    "image": "siren.png",
+    "buyers": []
+  },
+  {
+    "name": "Gas Mask",
+    "description": "Essential for navigating contaminated zones.",
+    "price": 12500,
+    "category": "Protection",
+    "stock": 10,
+    "image": "gas_mask.png",
+    "buyers": []
+  },
+  {
+    "name": "Portable Water Filter",
+    "description": "Ensures clean drinking water wherever you are.",
+    "price": 9999,
+    "category": "Water",
+    "stock": 0,
+    "image": "water_filter.png",
+    "buyers": []
+  },
+  {
+    "name": "First Aid Kit",
+    "description": "All the basics for survival injuries.",
+    "price": 8500,
+    "category": "Medical",
+    "stock": 15,
+    "image": "first_aid_kit.png",
+    "buyers": []
+  },
+  {
+    "name": "Survival Knife",
+    "description": "Multifunctional knife for various survival needs.",
+    "price": 7200,
+    "category": "Tools",
+    "stock": 12,
+    "image": "survival_knife.png",
+    "buyers": []
+  },
+  {
+    "name": "Solar Charger",
+    "description": "Keep your devices powered using solar energy.",
+    "price": 11000,
+    "category": "Energy",
+    "stock": 6,
+    "image": "solar_charger.png",
+    "buyers": []
+  },
+  {
+    "name": "Tactical Backpack",
+    "description": "Durable backpack with multiple compartments.",
+    "price": 14300,
+    "category": "Gear",
+    "stock": 9,
+    "image": "backpack.png",
+    "buyers": []
+  },
+  {
+    "name": "Radio",
+    "description": "Stay informed without relying on batteries.",
+    "price": 5999,
+    "category": "Communication",
+    "stock": 10,
+    "image": "radio.png",
+    "buyers": []
+  },
+  {
+    "name": "Emergency Food Pack",
+    "description": "Compact, high-calorie emergency rations.",
+    "price": 6800,
+    "category": "Food",
+    "stock": 20,
+    "image": "emergency_food.png",
+    "buyers": []
+  },
+  {
+    "name": "Thermal Sleeping Bag",
+    "description": "Keeps you warm in extreme conditions.",
+    "price": 9500,
+    "category": "Shelter",
+    "stock": 7,
+    "image": "sleeping_bag.png",
+    "buyers": []
+  },
+  {
+    "name": "LED Flashlight",
+    "description": "Bright and durable flashlight for all situations.",
+    "price": 4200,
+    "category": "Lighting",
+    "stock": 18,
+    "image": "flashlight.png",
+    "buyers": []
+  }
+]
