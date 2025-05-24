@@ -1,5 +1,19 @@
-<?php require 'header.php' ?>
-</body>
+<?php
+session_start();
+
+include_once("productStorage.php");
+include_once("userStorage.php");
+include_once("auth.php");
+
+$auth = new Auth(new UserStorage());
+if (!$auth->is_authenticated()) {
+  header("Location: login.php");
+  exit();
+}
+
+$user_storage = new UserStorage();
+
+require 'header.php' ?>
 <main>
   <h2>Your Cart</h2>
   <section class="mb-10 mt-3">

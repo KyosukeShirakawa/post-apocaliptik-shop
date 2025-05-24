@@ -2,4 +2,6 @@
   <p class="text-center">&copy; 2025 PostApocaliptIK Shop</p>
 </footer>
 
+</body>
+
 </html>

@@ -17,9 +17,9 @@
         <button>Add New Item</button>
       </div>
       <div>
-        <button>Cart</button>
-        <button>Login</button>
-        <button>Register</button>
+        <a href="cart.php">Cart</a>
+        <a href="login.php">Login</a>
+        <a href="register.php">Register</a>
       </div>
     </div>
   </header>

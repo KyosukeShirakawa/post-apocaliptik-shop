@@ -1,22 +1,41 @@
-[
-  {
-    "username": "FantastIK Offers",
-    "email": "admin@postapocaliptik.hu",
-    "password": "$2y$12$ZnYfv9xrXusnv9zrmiFUgubUs9p8Evlx16udL6BeqapM6T0N0izuu",
-    "admin": true,
-    "purchases": []
-  },
-  {
-    "username": "GasMaskGabi",
-    "email": "gabi@survivors.com",
-    "password": "$2y$12$0g/gmzC8ZvC.OBSU1G/nmO1oFsbSKOPAHgFtE7LhsoT5KbIEyMwnO",
-    "admin": false,
-    "purchases": [
-      {
-        "product": "LED Flashlight",
-        "quantity": 2,
-        "date": "2025-05-07"
-      }
-    ]
-  }
-]
+{
+    "0": {
+        "username": "FantastIK Offers",
+        "email": "admin@postapocaliptik.hu",
+        "password": "$2y$12$ZnYfv9xrXusnv9zrmiFUgubUs9p8Evlx16udL6BeqapM6T0N0izuu",
+        "admin": true,
+        "purchases": []
+    },
+    "1": {
+        "username": "GasMaskGabi",
+        "email": "gabi@survivors.com",
+        "password": "$2y$12$0g\/gmzC8ZvC.OBSU1G\/nmO1oFsbSKOPAHgFtE7LhsoT5KbIEyMwnO",
+        "admin": false,
+        "purchases": [
+            {
+                "product": "LED Flashlight",
+                "quantity": 2,
+                "date": "2025-05-07"
+            }
+        ]
+    },
+    "6831b606d575c": {
+        "username": "fanni",
+        "email": "fanni@gmail.com",
+        "password": "$2y$12$ty6YsB8vuHXKu6LAWwvAWOIrMtBfPci9m9RtoJNzW35jHSbBw8DIu",
+        "admin": false,
+        "purchases": [
+            {
+                "product": "LED Flashlight",
+                "quantity": 2,
+                "date": "2025-05-07"
+            },
+            {
+                "product": "LED Flashlight",
+                "quantity": 2,
+                "date": "2025-05-08"
+            }
+        ],
+        "id": "6831b606d575c"
+    }
+}

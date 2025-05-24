@@ -15,9 +15,36 @@ h2,h3,h4 {
   font-weight: 600;
 }
 
+table {
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+  border-collapse: collapse;
+  border: none;
+
+}
+
+td {
+  padding: 10px 50px;
+  border: 1px solid var(--color-gray-700);
+}
 
 
-#filterBtn {
+input {
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-500);
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+#filterForm input {
+  font-size: 0.8rem;
+  width: 140px;
+  height: 30px;
+}
+
+#filterForm button {
   background-color: var(--color-green-700);
   color: var(--color-white);
   text-align: center;
@@ -28,13 +55,20 @@ h2,h3,h4 {
   border-radius: 5px;
 }
 
-input {
-  background-color: var(--color-gray-800);
-  color: var(--color-gray-500);
+#loginForm {
+  width: 50%;
+}
+
+#loginForm input {
+  font-size: 0.8rem;
+}
+
+#loginForm button {
+  background-color: var(--color-green-700);
+  color: var(--color-white);
+  text-align: center;
   padding: 4px 10px;
   font-size: 0.8rem;
-  width: 140px;
-  height: 30px;
   border-radius: 5px;
 }
 
@@ -98,20 +132,4 @@ input {
   padding: 10px 10px;
   border-left: 3px solid var(--color-green-700);
   border-radius: 5px;
-}
-
-
-table {
-  width: 100%;
-  color: white;
-  text-align: center;
-  margin-bottom: 5px;
-  border-collapse: collapse;
-  border: none;
-
-}
-
-td {
-  padding: 10px 50px;
-  border: 1px solid var(--color-gray-700);
 }

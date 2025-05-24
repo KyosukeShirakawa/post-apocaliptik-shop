@@ -1,11 +1,20 @@
 <?php
-include_once("./storage/productStorage.php");
+session_start();
+
+include_once("productStorage.php");
+include_once("userStorage.php");
+include_once("auth.php");
+
+$auth = new Auth(new UserStorage());
+if (!$auth->is_authenticated()) {
+  header("Location: login.php");
+  exit();
+}
 
 $id = $_GET["id"];
 
 $ps = new ProductStorage();
 $item = $ps->findById($id);
-
 
 
 

@@ -1,5 +1,5 @@
 <?php
-include_once("./storage/storage.php");
+include_once("storage.php");
 
 class ProductStorage extends Storage
 {

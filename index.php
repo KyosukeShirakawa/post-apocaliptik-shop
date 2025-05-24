@@ -1,5 +1,16 @@
 <?php
-include_once('./storage/productStorage.php');
+session_start();
+
+
+include_once('userStorage.php');
+include_once('productStorage.php');
+include_once('auth.php');
+
+$auth = new Auth(new UserStorage());
+if (!$auth->is_authenticated()) {
+  header("Location: login.php");
+  exit();
+}
 
 $ps = new ProductStorage();
 $products =  $ps->findAll();
@@ -18,10 +29,9 @@ if (count($_GET) > 0) {
 
 require 'header.php';
 ?>
-</body>
 <main>
   <h2 class="mb-3">Products</h2>
-  <form method="get">
+  <form id="filterForm" method="get">
     <input type="text" name="category" value="" placeholder="Category">
     <input type="text" name="minPrice" value="" placeholder="Min price (HUF)">
     <input type="text" name="maxPrice" value="" placeholder="Max price (HUF)">
@@ -47,4 +57,5 @@ require 'header.php';
     </div>
   </section>
 </main>
+
 <?php require 'footer.php' ?>
