@@ -76,15 +76,6 @@ input {
   border-radius: 5px;
 }
 
-.btn-primary {
-  background-color: var(--color-green-700);
-}
-.btn-secondary {
-  background-color: var(--color-gray-700);
-}
-.btn-tertiary {
-  background-color: var(--color-blue-600);
-}
 
 .btn-long {
   text-align: center;

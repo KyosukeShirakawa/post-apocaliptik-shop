@@ -5,7 +5,7 @@
         "description": "Protects against light and moderate radiation exposure.",
         "price": 29999,
         "category": "Protection",
-        "stock": 5,
+        "stock": 0,
         "image": "hazmat_suit.png",
         "buyers": []
     },

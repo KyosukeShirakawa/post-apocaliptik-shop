@@ -38,9 +38,9 @@ require 'header.php';
             <p>Stock: <?= $product["stock"] ?></p>
           </div>
           <div class="card-btns">
-            <a href="./product.php?id=<?= $product["id"]; ?>" class=" btn btn-primary">View Details</a>
-            <a class="btn btn-secondary">Add to Cart</a>
-            <a class="btn btn-tertiary">Edit Item</a>
+            <a href="./product.php?id=<?= $product["id"]; ?>" class="btn bg-green-700">View Details</a>
+            <a class="btn <?php echo (int)$product["stock"] > 0 ?  "bg-gray-700" :  "bg-red-900" ?>"><?php echo (int)$product["stock"] > 0 ?  "Add to Cart" :  "Out of stock" ?></a>
+            <a class="btn bg-blue-600">Edit Item</a>
           </div>
         </div>
       <?php endforeach ?>
