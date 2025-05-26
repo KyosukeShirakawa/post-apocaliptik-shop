@@ -23,20 +23,21 @@ function validate($input, &$data, &$errors)
   return count($errors) === 0;
 }
 
-session_start();
+$data = [];
+$errors = [];
 
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 $user_storage = new UserStorage();
 $auth = new Auth($user_storage);
 
-$data = [];
-$errors = [];
 
 if (count($_POST) > 0) {
   if (validate($_POST, $data, $errors)) {
     $auth_user = $auth->authenticate($data['username'], $data['password']);
-
     if (!$auth_user) {
-      $errors['global'] = "Login error";
+      $errors['global'] = "Username or password is incorrect";
     } else {
       $auth->login($auth_user);
       header("Location: index.php");
@@ -52,7 +53,16 @@ require 'header.php';
   <h2 class="mb-3 text-center">Login</h2>
   <div class="flex justify-center align-middle">
     <form id="loginForm" method="post" class="flex flex-col align-middle gap-4 mb-10" novalidate>
+      <?php if (isset($errors['global'])) : ?>
+        <p class="error text-center"><?= $errors['global'] ?></p>
+      <?php endif; ?>
+      <?php if (isset($errors['username'])) : ?>
+        <p class="error text-center"><?= $errors['username'] ?></p>
+      <?php endif; ?>
       <input type="text" name="username" value="" placeholder="Username">
+      <?php if (isset($errors['password'])) : ?>
+        <p class="error text-center"><?= $errors['password'] ?></p>
+      <?php endif; ?>
       <input type="text" name="password" value="" placeholder="Password">
       <button class="">Login</button>
     </form>

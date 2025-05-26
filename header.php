@@ -10,15 +10,21 @@
 
 <body>
   <header class="bg-green-700 px-5 py-2 mb-5 rounded-sm">
-    <h1 class="text-xl text-white font-bold">PostApocaliptIK Shop</h1>
+    <h1 class="text-xl text-white font-bold"><a href="index.php">PostApocaliptIK Shop</a></h1>
     <div class="flex justify-between text-amber-300">
-      <div>
+      <div class="flex gap-5">
         <a href="index.php">Home</a>
-        <button>Add New Item</button>
+        <?php if ($_SESSION["user"]["admin"]): ?>
+          <a href="">Add New Item</a>
+        <?php endif; ?>
       </div>
-      <div>
+      <div class="flex gap-5">
         <a href="cart.php">Cart</a>
-        <a href="login.php">Login</a>
+        <?php if ($_SESSION["user"]) : ?>
+          <a href="logout.php">Logout</a>
+        <?php else : ?>
+          <a href="login.php">Login</a>
+        <?php endif; ?>
         <a href="register.php">Register</a>
       </div>
     </div>

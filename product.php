@@ -10,13 +10,19 @@ if (!$auth->is_authenticated()) {
   header("Location: login.php");
   exit();
 }
+if (!isset($_GET["id"])) {
+  header("Location: index.php");
+  exit();
+}
 
 $id = $_GET["id"];
 
 $ps = new ProductStorage();
 $item = $ps->findById($id);
-
-
+if (!$item) {
+  header("Location: index.php");
+  exit();
+}
 
 require 'header.php' ?>
 </body>

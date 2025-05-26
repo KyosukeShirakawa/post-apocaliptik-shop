@@ -1,6 +1,7 @@
 <?php
-session_start();
-
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 
 include_once('userStorage.php');
 include_once('productStorage.php');
@@ -17,12 +18,22 @@ $products =  $ps->findAll();
 
 // filter products
 if (count($_GET) > 0) {
-  if (isset($_GET["category"]) && !empty(trim($_GET["minPrice"])) && is_numeric(trim($_GET["minPrice"])) && !empty(trim($_GET["maxPrice"])) && is_numeric(trim($_GET["maxPrice"]))) {
-    $minPrice = $_GET["minPrice"];
-    $maxPrice = $_GET["maxPrice"];
-
-    $products = array_filter($products, function ($p) {
-      return $p["category"] == trim($_GET["category"]) && $p["price"] >= (int)trim($_GET["minPrice"]) && $p["price"] <= (int)trim($_GET["maxPrice"]);
+  $category = trim($_GET["category"]);
+  $minPrice = (int)trim($_GET["minPrice"]);
+  $maxPrice = (int)trim($_GET["maxPrice"]);
+  if ($category) {
+    $products = array_filter($products, function ($p) use ($category) {
+      return $p["category"] == $category;
+    });
+  }
+  if ($minPrice) {
+    $products = array_filter($products, function ($p) use ($minPrice) {
+      return $p["price"] >= $minPrice;
+    });
+  }
+  if ($maxPrice) {
+    $products = array_filter($products, function ($p) use ($maxPrice) {
+      return $p["price"] <= $maxPrice;
     });
   }
 }

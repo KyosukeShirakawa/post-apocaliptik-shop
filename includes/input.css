@@ -38,6 +38,10 @@ input {
   padding: 4px 10px;
 }
 
+.error{
+  color: var(--color-red-700);
+}
+
 #filterForm input {
   font-size: 0.8rem;
   width: 140px;

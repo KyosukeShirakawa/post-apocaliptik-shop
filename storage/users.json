@@ -37,5 +37,21 @@
             }
         ],
         "id": "6831b606d575c"
+    },
+    "683353e83daf0": {
+        "username": "aai",
+        "email": "aai@example.com",
+        "password": "$2y$12$kzXeOzvheQMFVox1jKia2.7lmL0Lz5nkwej9re8bwVWPkCUzuBr2i",
+        "admin": false,
+        "purchases": [],
+        "id": "683353e83daf0"
+    },
+    "6833633c8ebc9": {
+        "username": "kyo",
+        "email": "mr.kyosuke0527@gmail.com",
+        "password": "$2y$12$qz2BikDrWPp\/z.TMgBJi5eRuL4aI79gl8ivDmpiOB7DbfhjMpqhdy",
+        "admin": true,
+        "purchases": [],
+        "id": "6833633c8ebc9"
     }
 }

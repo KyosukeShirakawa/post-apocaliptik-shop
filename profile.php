@@ -11,6 +11,11 @@ if (!$auth->is_authenticated()) {
   exit();
 }
 
+if (!isset($_GET["id"])) {
+  header("Location: index.php");
+  exit();
+}
+
 $id = $_GET["id"];
 $user_storage = new UserStorage();
 $user = $user_storage->findById($id);
