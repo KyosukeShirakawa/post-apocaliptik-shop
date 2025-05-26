@@ -51,7 +51,18 @@
         "email": "mr.kyosuke0527@gmail.com",
         "password": "$2y$12$qz2BikDrWPp\/z.TMgBJi5eRuL4aI79gl8ivDmpiOB7DbfhjMpqhdy",
         "admin": true,
-        "purchases": [],
+        "purchases": [
+            {
+                "product": "LED Flashlight",
+                "quantity": 2,
+                "date": "2025-05-07"
+            },
+            {
+                "product": "LED Flashlight",
+                "quantity": 2,
+                "date": "2025-05-08"
+            }
+        ],
         "id": "6833633c8ebc9"
     }
 }

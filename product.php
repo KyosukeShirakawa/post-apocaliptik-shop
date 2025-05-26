@@ -24,6 +24,28 @@ if (!$item) {
   exit();
 }
 
+$us = new UserStorage();
+$users = $us->findAll();
+
+$purchaseMap = [];
+foreach ($users as $user) {
+  foreach ($user['purchases'] as $purchase) {
+    if ($purchase['product'] === $item['name']) {
+      $purchaseMap[] = [
+        'username' => $user['username'],
+        'quantity' => $purchase['quantity'],
+        'date' => $purchase['date'],
+      ];
+    }
+  }
+}
+
+$userPurchase = array_filter($_SESSION["user"]["purchases"], function ($p) use ($item) {
+  return $p['product'] === $item['name'];
+});
+
+print_r($userPurchase);
+
 require 'header.php' ?>
 </body>
 <main>
@@ -37,19 +59,26 @@ require 'header.php' ?>
         <p>Stock: <?= $item["stock"] ?> pcs</p>
       </div>
     </div>
-    <h3 class="mb-3">All Purchases</h3>
-    <div id="record-container" class="mb-3 flex flex-col gap-2">
-      <div class="record">
-        <p>ShelterQueen23 - 1 pcs -2025.05.01</p>
+    <?php if ($_SESSION["user"]["admin"]) : ?>
+      <h3 class="mb-3"><?php ?>All Purchases</h3>
+      <div id="record-container" class="mb-3 flex flex-col gap-2">
+        <?php foreach ($purchaseMap as $p) : ?>
+          <div class="record">
+            <p><?= $p['username'] ?> - <?= $p['quantity'] ?> pcs -<?= $p['date'] ?></p>
+          </div>
+        <?php endforeach; ?>
       </div>
-      <div class="record">
-        <p>ShelterQueen23 - 1 pcs -2025.05.01</p>
+      <button class="btn-long bg-blue-500">Edit Item</button>
+    <?php else : ?>
+      <h3 class="mb-3"><?php ?>Purchase History</h3>
+      <div id="record-container" class="mb-3 flex flex-col gap-2">
+        <?php foreach ($userPurchase as $p): ?>
+          <div class="record">
+            <p><?= $_SESSION["user"]["username"] ?> - <?= $p['quantity'] ?> pcs -<?= $p['date'] ?></p>
+          </div>
+        <?php endforeach; ?>
       </div>
-      <div class="record">
-        <p>ShelterQueen23 - 1 pcs -2025.05.01</p>
-      </div>
-    </div>
-    <button class="btn-long bg-blue-500">Edit Item</button>
+    <?php endif; ?>
   </section>
 </main>
 <?php require 'footer.php' ?>
