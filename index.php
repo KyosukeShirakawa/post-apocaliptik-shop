@@ -62,7 +62,7 @@ require 'header.php';
             <a href="./product.php?id=<?= $product["id"]; ?>" class="btn bg-green-700">View Details</a>
             <a class="btn <?php echo (int)$product["stock"] > 0 ?  "bg-gray-700" :  "bg-red-900" ?>"><?php echo (int)$product["stock"] > 0 ?  "Add to Cart" :  "Out of stock" ?></a>
             <?php if ($_SESSION["user"]["admin"]): ?>
-              <a class="btn bg-blue-600">Edit Item</a>
+              <a href="edit_product.php?id=<?= $product["id"] ?>" class="btn bg-blue-600">Edit Item</a>
             <?php endif; ?>
           </div>
         </div>
