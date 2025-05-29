@@ -3,9 +3,9 @@
         "id": 0,
         "name": "Hazmat Suit",
         "description": "Protects against light and moderate radiation exposure.",
-        "price": 29999,
+        "price": 25000,
         "category": "Protection",
-        "stock": 0,
+        "stock": 5,
         "image": "hazmat_suit.png",
         "buyers": []
     },
@@ -119,22 +119,13 @@
         "image": "flashlight.png",
         "buyers": []
     },
-    "683817f52991a": {
-        "name": "backpack2",
-        "price": 11111,
-        "category": "Gear",
-        "stock": 1,
-        "image": "backpack.png",
-        "description": "dataaa",
-        "id": "683817f52991a"
-    },
-    "6838180f28abb": {
-        "name": "backpack2",
-        "price": 2,
-        "category": "Gear",
-        "stock": 2,
-        "image": "backpack.png",
-        "description": "this is backpack",
-        "id": "6838180f28abb"
+    "68381f217509f": {
+        "name": "Hazmat Suit",
+        "price": 25000,
+        "category": "Protection",
+        "stock": 5,
+        "image": "hazmat_suit.png",
+        "description": "Protects against light and moderate radiation exposure.",
+        "id": "68381f217509f"
     }
 }

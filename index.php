@@ -69,7 +69,7 @@ require 'header.php';
               <button class="add-btn btn bg-red-900" disabled>Out of stock</button>
             <?php endif; ?>
             <?php if ($_SESSION["user"]["admin"]): ?>
-              <a class="btn bg-blue-600">Edit Item</a>
+              <a href="edit_product.php?id=<?= $product["id"] ?>" class="btn bg-blue-600">Edit Item</a>
             <?php endif; ?>
           </div>
         </div>
