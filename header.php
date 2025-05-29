@@ -14,7 +14,7 @@
     <div class="flex justify-between text-amber-300">
       <div class="flex gap-5">
         <a href="index.php">Home</a>
-        <?php if ($_SESSION["user"]["admin"]): ?>
+        <?php if (isset($_SESSION["user"]) && !empty($_SESSION["user"]["admin"])): ?>
           <a href="/add_product.php">Add New Item</a>
         <?php endif; ?>
       </div>

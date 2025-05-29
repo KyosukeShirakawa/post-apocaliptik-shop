@@ -4,6 +4,7 @@ session_start();
 include_once("productStorage.php");
 include_once("userStorage.php");
 include_once("auth.php");
+include_once("shoppingCart.php");
 
 $auth = new Auth(new UserStorage());
 if (!$auth->is_authenticated()) {
@@ -12,6 +13,9 @@ if (!$auth->is_authenticated()) {
 }
 
 $user_storage = new UserStorage();
+$cart = new ShoppingCart();
+
+print_r($_SESSION["cart"]);
 
 require 'header.php' ?>
 <main>
@@ -27,28 +31,18 @@ require 'header.php' ?>
         </tr>
       </thead>
       <tbody class="bg-gray-900">
-        <tr>
-          <td>First Aid Kit</td>
-          <td>8 500 HUF</td>
-          <td>2</td>
-          <td>17 000 HUF</td>
-        </tr>
-        <tr>
-          <td>First Aid Kit</td>
-          <td>8 500 HUF</td>
-          <td>2</td>
-          <td>17 000 HUF</td>
-        </tr>
-        <tr>
-          <td>First Aid Kit</td>
-          <td>8 500 HUF</td>
-          <td>2</td>
-          <td>17 000 HUF</td>
-        </tr>
+        <?php foreach ($_SESSION["cart"] as $product): ?>
+          <tr>
+            <td><?= $product["name"] ?></td>
+            <td><?= $product["price"] ?> HUF</td>
+            <td><?= $product["quantity"] ?></td>
+            <td><?= $product["price"] * $product["quantity"] ?> HUF</td>
+          </tr>
+        <?php endforeach; ?>
       </tbody>
     </table>
 
-    <h3 class="mb-2">Total: 53 700 HUF</h3>
+    <h3 class="mb-2">Total: <?= $cart->getTotal() ?> HUF</h3>
     <button class="btn-long bg-green-700">Checkout</button>
   </section>
 </main>

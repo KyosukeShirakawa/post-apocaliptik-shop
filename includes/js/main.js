@@ -9,8 +9,7 @@ document.addEventListener('click', (e) => {
     })
     .then(response => response.text())
     .then(text => {
-console.log(text);
-      
+      console.log(text);
     });
   }
 })

@@ -51,7 +51,7 @@ require 'header.php';
     <input type="text" name="maxPrice" value="" placeholder="Max price (HUF)">
     <button id="filterBtn">Filter</button>
   </form>
-  <section class="mb-10 mt-3">
+  <section class="mb-10 mt-3 flex justify-center">
     <div id="grid-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 p-5">
       <?php foreach ($products as $product): ?>
         <div class="card">
