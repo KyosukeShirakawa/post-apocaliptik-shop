@@ -35,14 +35,3 @@ if (!$id) {
 
 $ps = new ProductStorage();
 $product = $ps->findById($id);
-
-if (!$product) {
-  http_response_code(404);
-  echo json_encode(["error" => "Product not found"]);
-  exit;
-}
-
-$cart = new ShoppingCart();
-$cart->add($product);
-
-echo json_encode(["success" => true]);
