@@ -68,7 +68,7 @@ require 'header.php' ?>
           </div>
         <?php endforeach; ?>
       </div>
-      <button class="btn-long bg-blue-500">Edit Item</button>
+      <a href="edit_product.php?id=<?= $id ?>" class="btn-long bg-blue-500">Edit Item</a>
     <?php else : ?>
       <h3 class="mb-3"><?php ?>Purchase History</h3>
       <div id="record-container" class="mb-3 flex flex-col gap-2">
