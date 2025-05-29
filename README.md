@@ -7,22 +7,28 @@ I declare that this solution is my own work. I have not copied or used solutions
 ELTE Academic and Examination Regulations, Faculty of Informatics Special Provisions, Section 377/A: "A student who, during an assessment (exam, midterm, assignment) requiring the creation of a computer program or module, uses tools other than those specified by the instructor or provides unauthorized help to another student, commits academic misconduct. As a result, the student will not be able to complete the subject in the given semester and will not earn credits for the subject."
 
 Minimum Requirements (8 points)
-0 points README.md file completed and uploaded.
-1 point Homepage: all products listed dynamically.
-1 point Homepage: clicking a product shows the details page.
-1 point Product Details Page: displays attributes and image.
-1 point Homepage: filters by category and price work.
-1 point Registration with error handling.
-1 point Login with error handling.
-2 points Adding new products works with validation and error handling.
+
+<!-- 0 points README.md file completed and uploaded. -->
+<!-- 1 point Homepage: all products listed dynamically. -->
+<!-- 1 point Homepage: clicking a product shows the details page. -->
+<!-- 1 point Product Details Page: displays attributes and image. -->
+<!-- 1 point Homepage: filters by category and price work. -->
+<!-- 1 point Registration with error handling. -->
+<!-- 1 point Login with error handling. -->
+<!-- 2 points Adding new products works with validation and error handling. -->
+
 Core Tasks (12 points)
-1 point Successful login updates navigation (shows Profile/Cart).
-1 point Logout accessible on all pages.
-2 points Shopping Cart: adding items and viewing cart contents. Total price also counted.
+
+<!-- 1 point Successful login updates navigation (shows Profile/Cart). -->
+<!-- 1 point Logout accessible on all pages. -->
+<!-- 2 points Shopping Cart: adding items and viewing cart contents. Total price also counted. -->
+
 2 points Purchased quantities are deducted from the inventory value of each product.
-1 point Session: store user, and cart data in session.
-1 point Admin-only: Add Product button visible. Admin is able to add a new product.
-1 point Admin-only: Edit button on product cards. Admin is able to edit an existing product.
+
+<!-- 1 point Session: store user, and cart data in session. -->
+<!-- 1 point Admin-only: Add Product button visible. Admin is able to add a new product. -->
+<!-- 1 point Admin-only: Edit button on product cards. Admin is able to edit an existing product. -->
+
 1 point Product details: shows user’s purchase history for user and all buyers for admin in ascending orders.
 2 points Design: polished, responsive, and mobile-friendly.
 Bonus Tasks (max 5 points)

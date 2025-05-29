@@ -40,11 +40,13 @@ foreach ($users as $user) {
   }
 }
 
+usort($purchaseMap, function ($a, $b) {
+  return strcasecmp($a['username'], $b['username']);
+});
+
 $userPurchase = array_filter($_SESSION["user"]["purchases"], function ($p) use ($item) {
   return $p['product'] === $item['name'];
 });
-
-print_r($userPurchase);
 
 require 'header.php' ?>
 </body>
