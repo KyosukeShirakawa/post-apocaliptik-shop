@@ -1,5 +1,5 @@
-[
-    {
+{
+    "0": {
         "id": 0,
         "name": "Hazmat Suit",
         "description": "Protects against light and moderate radiation exposure.",
@@ -9,7 +9,7 @@
         "image": "hazmat_suit.png",
         "buyers": []
     },
-    {
+    "1": {
         "id": 1,
         "name": "Zombie Siren",
         "description": "Loud alarm to warn of approaching dangers.",
@@ -19,7 +19,7 @@
         "image": "siren.png",
         "buyers": []
     },
-    {
+    "2": {
         "id": 2,
         "name": "Gas Mask",
         "description": "Essential for navigating contaminated zones.",
@@ -29,7 +29,7 @@
         "image": "gas_mask.png",
         "buyers": []
     },
-    {
+    "3": {
         "id": 3,
         "name": "Portable Water Filter",
         "description": "Ensures clean drinking water wherever you are.",
@@ -39,7 +39,7 @@
         "image": "water_filter.png",
         "buyers": []
     },
-    {
+    "4": {
         "id": 4,
         "name": "First Aid Kit",
         "description": "All the basics for survival injuries.",
@@ -49,7 +49,7 @@
         "image": "first_aid_kit.png",
         "buyers": []
     },
-    {
+    "5": {
         "id": 5,
         "name": "Survival Knife",
         "description": "Multifunctional knife for various survival needs.",
@@ -59,7 +59,7 @@
         "image": "survival_knife.png",
         "buyers": []
     },
-    {
+    "6": {
         "id": 6,
         "name": "Solar Charger",
         "description": "Keep your devices powered using solar energy.",
@@ -69,7 +69,7 @@
         "image": "solar_charger.png",
         "buyers": []
     },
-    {
+    "7": {
         "id": 7,
         "name": "Tactical Backpack",
         "description": "Durable backpack with multiple compartments.",
@@ -79,7 +79,7 @@
         "image": "backpack.png",
         "buyers": []
     },
-    {
+    "8": {
         "id": 8,
         "name": "Radio",
         "description": "Stay informed without relying on batteries.",
@@ -89,7 +89,7 @@
         "image": "radio.png",
         "buyers": []
     },
-    {
+    "9": {
         "id": 9,
         "name": "Emergency Food Pack",
         "description": "Compact, high-calorie emergency rations.",
@@ -99,7 +99,7 @@
         "image": "emergency_food.png",
         "buyers": []
     },
-    {
+    "10": {
         "id": 10,
         "name": "Thermal Sleeping Bag",
         "description": "Keeps you warm in extreme conditions.",
@@ -109,7 +109,7 @@
         "image": "sleeping_bag.png",
         "buyers": []
     },
-    {
+    "11": {
         "id": 11,
         "name": "LED Flashlight",
         "description": "Bright and durable flashlight for all situations.",
@@ -118,5 +118,23 @@
         "stock": 18,
         "image": "flashlight.png",
         "buyers": []
+    },
+    "683817f52991a": {
+        "name": "backpack2",
+        "price": 11111,
+        "category": "Gear",
+        "stock": 1,
+        "image": "backpack.png",
+        "description": "dataaa",
+        "id": "683817f52991a"
+    },
+    "6838180f28abb": {
+        "name": "backpack2",
+        "price": 2,
+        "category": "Gear",
+        "stock": 2,
+        "image": "backpack.png",
+        "description": "this is backpack",
+        "id": "6838180f28abb"
     }
-]
+}

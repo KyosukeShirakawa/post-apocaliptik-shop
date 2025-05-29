@@ -13,7 +13,6 @@ if (!$auth->is_authenticated()) {
 
 $user_storage = new UserStorage();
 
-
 require 'header.php' ?>
 <main>
   <h2>Your Cart</h2>

@@ -6,6 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 include_once('userStorage.php');
 include_once('productStorage.php');
 include_once('auth.php');
+include_once('shoppingCart.php');
 
 $auth = new Auth(new UserStorage());
 if (!$auth->is_authenticated()) {
@@ -15,6 +16,8 @@ if (!$auth->is_authenticated()) {
 
 $ps = new ProductStorage();
 $products =  $ps->findAll();
+
+$cart = new ShoppingCart();
 
 // filter products
 if (count($_GET) > 0) {
@@ -60,7 +63,11 @@ require 'header.php';
           </div>
           <div class="card-btns">
             <a href="./product.php?id=<?= $product["id"]; ?>" class="btn bg-green-700">View Details</a>
-            <a class="btn <?php echo (int)$product["stock"] > 0 ?  "bg-gray-700" :  "bg-red-900" ?>"><?php echo (int)$product["stock"] > 0 ?  "Add to Cart" :  "Out of stock" ?></a>
+            <?php if ((int)$product["stock"] > 0) : ?>
+              <button data-id="<?= $product["id"] ?>" class="add-btn btn bg-gray-700">Add to Cart</button>
+            <?php else : ?>
+              <button class="add-btn btn bg-red-900" disabled>Out of stock</button>
+            <?php endif; ?>
             <?php if ($_SESSION["user"]["admin"]): ?>
               <a class="btn bg-blue-600">Edit Item</a>
             <?php endif; ?>

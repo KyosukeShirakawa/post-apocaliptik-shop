@@ -15,7 +15,7 @@
       <div class="flex gap-5">
         <a href="index.php">Home</a>
         <?php if ($_SESSION["user"]["admin"]): ?>
-          <a href="">Add New Item</a>
+          <a href="/add_product.php">Add New Item</a>
         <?php endif; ?>
       </div>
       <div class="flex gap-5">
