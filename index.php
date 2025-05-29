@@ -64,7 +64,7 @@ require 'header.php';
           <div class="card-btns">
             <a href="./product.php?id=<?= $product["id"]; ?>" class="btn bg-green-700">View Details</a>
             <?php if ((int)$product["stock"] > 0) : ?>
-              <button data-id="<?= $product["id"] ?>" class="add-btn btn bg-gray-700">Add to Cart</button>
+              <button data-id="<?= $product["id"] ?>" class="add-btn btn bg-gray-700 ">Add to Cart</button>
             <?php else : ?>
               <button class="add-btn btn bg-red-900" disabled>Out of stock</button>
             <?php endif; ?>

@@ -17,6 +17,9 @@ h2,h3,h4 {
 button {
   cursor: pointer;
 }
+button:active {
+  scale: 95%;
+}
 
 table {
   width: 100%;
@@ -115,6 +118,9 @@ input, textarea {
   width: 100%;
   height: 30px;
   border-radius: 5px;
+}
+.btn:active {
+  scale: 95%;
 }
 
 

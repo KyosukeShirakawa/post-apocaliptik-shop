@@ -68,9 +68,9 @@ require 'header.php' ?>
           </div>
         <?php endforeach; ?>
       </div>
-      <button class="btn-long bg-blue-500">Edit Item</button>
+      <a href="edit_product.php?id=<?= $item["id"] ?>" class="btn btn-long bg-blue-500">Edit Item</a>
     <?php else : ?>
-      <h3 class="mb-3"><?php ?>Purchase History</h3>
+      <h3 class="mb-3">Purchase History</h3>
       <div id="record-container" class="mb-3 flex flex-col gap-2">
         <?php foreach ($userPurchase as $p): ?>
           <div class="record">
