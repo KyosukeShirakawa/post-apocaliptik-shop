@@ -68,13 +68,8 @@ $id = $_GET["id"];
 $ps = new ProductStorage();
 $product = $ps->findById($id);
 
-print_r($product);
-
 if (count($_POST) > 0) {
   if (validate($_POST, $data, $errors)) {
-    $ps = new ProductStorage();
-    $ps->add($data);
-
     $product["name"] = $data["name"];
     $product["price"] = $data["price"];
     $product["category"] = $data["category"];
