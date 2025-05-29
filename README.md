@@ -29,7 +29,8 @@ Core Tasks (12 points)
 <!-- 1 point Admin-only: Add Product button visible. Admin is able to add a new product. -->
 <!-- 1 point Admin-only: Edit button on product cards. Admin is able to edit an existing product. -->
 
-1 point Product details: shows user’s purchase history for user and all buyers for admin in ascending orders.
+<!-- 1 point Product details: shows user’s purchase history for user and all buyers for admin in ascending orders. -->
+
 2 points Design: polished, responsive, and mobile-friendly.
 Bonus Tasks (max 5 points)
 1 points Use https://fakestoreapi.com to upload your product list. This way the Zombie feeling is slightly damaged, but you can build an exciting web store. (For Example: https://fakestoreapi.com/products?limit=20)

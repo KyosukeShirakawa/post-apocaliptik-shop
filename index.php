@@ -51,7 +51,7 @@ require 'header.php';
     <input type="text" name="maxPrice" value="" placeholder="Max price (HUF)">
     <button id="filterBtn">Filter</button>
   </form>
-  <section class="mb-10 mt-3">
+  <section class="mb-10 mt-3 flex justify-center">
     <div id="grid-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 p-5">
       <?php foreach ($products as $product): ?>
         <div class="card">
@@ -64,7 +64,7 @@ require 'header.php';
           <div class="card-btns">
             <a href="./product.php?id=<?= $product["id"]; ?>" class="btn bg-green-700">View Details</a>
             <?php if ((int)$product["stock"] > 0) : ?>
-              <button data-id="<?= $product["id"] ?>" class="add-btn btn bg-gray-700">Add to Cart</button>
+              <button data-id="<?= $product["id"] ?>" class="add-btn btn bg-gray-700 ">Add to Cart</button>
             <?php else : ?>
               <button class="add-btn btn bg-red-900" disabled>Out of stock</button>
             <?php endif; ?>
