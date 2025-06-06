@@ -1,6 +1,17 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+include_once('userStorage.php');
 include_once('auth.php');
 include_once('productStorage.php');
+
+$auth = new Auth(new UserStorage());
+if (!$auth->is_authenticated()) {
+  header("Location: login.php");
+  exit();
+}
 
 function validate($input, &$data, &$errors)
 {
