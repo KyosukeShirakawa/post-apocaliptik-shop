@@ -21,9 +21,10 @@ Core Tasks (12 points)
 
 <!-- 1 point Successful login updates navigation (shows Profile/Cart). -->
 <!-- 1 point Logout accessible on all pages. -->
+
 <!-- 2 points Shopping Cart: adding items and viewing cart contents. Total price also counted. -->
 
-2 points Purchased quantities are deducted from the inventory value of each product.
+<!-- 2 points Purchased quantities are deducted from the inventory value of each product. -->
 
 <!-- 1 point Session: store user, and cart data in session. -->
 <!-- 1 point Admin-only: Add Product button visible. Admin is able to add a new product. -->

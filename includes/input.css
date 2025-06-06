@@ -44,6 +44,11 @@ input, textarea {
   padding: 4px 10px;
 }
 
+.message {
+  color: var(--color-green-700);
+  font-size: 1.5rem;
+}
+
 .error{
   color: var(--color-red-700);
 }

@@ -5,7 +5,7 @@
         "description": "Protects against light and moderate radiation exposure.",
         "price": 22000,
         "category": "Protection",
-        "stock": 12,
+        "stock": 11,
         "image": "hazmat_suit.png",
         "buyers": []
     },
@@ -15,7 +15,7 @@
         "description": "Loud alarm to warn of approaching dangers.",
         "price": 15999,
         "category": "Alert",
-        "stock": 2,
+        "stock": 0,
         "image": "siren.png",
         "buyers": []
     },
