@@ -15,13 +15,13 @@
       <div class="flex gap-5">
         <a href="index.php">Home</a>
         <!-- BUG fix session user undefined -->
-        <?php if ($_SESSION["user"]["admin"]): ?>
+        <?php if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]): ?>
           <a href="/add_product.php">Add New Item</a>
         <?php endif; ?>
       </div>
       <div class="flex gap-5">
         <a href="cart.php">Cart</a>
-        <?php if ($_SESSION["user"]) : ?>
+        <?php if (isset($_SESSION["user"]) && $_SESSION["user"]) : ?>
           <a href="logout.php">Logout</a>
         <?php else : ?>
           <a href="login.php">Login</a>

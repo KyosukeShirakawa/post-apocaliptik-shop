@@ -44,13 +44,15 @@ if (count($_GET) > 0) {
 require 'header.php';
 ?>
 <main>
-  <h2 class="mb-3">Products</h2>
-  <form id="filterForm" method="get">
-    <input type="text" name="category" value="" placeholder="Category">
-    <input type="text" name="minPrice" value="" placeholder="Min price (HUF)">
-    <input type="text" name="maxPrice" value="" placeholder="Max price (HUF)">
-    <button id="filterBtn">Filter</button>
-  </form>
+  <section class="flex flex-col items-center justify-center">
+    <h2 class="mb-3">Products</h2>
+    <form id="filterForm" class="flex @max-sm:flex-col sm: gap-3" method="get">
+      <input type="text" name="category" value="" placeholder="Category">
+      <input type="text" name="minPrice" value="" placeholder="Min price (HUF)">
+      <input type="text" name="maxPrice" value="" placeholder="Max price (HUF)">
+      <button id="filterBtn">Filter</button>
+    </form>
+  </section>
   <section class="mb-10 mt-3 flex justify-center">
     <div id="grid-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 p-5">
       <?php foreach ($products as $product): ?>
